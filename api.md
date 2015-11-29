@@ -109,7 +109,54 @@ FORMAT: 1A
                 "msg": "ok"
             }
 
-# AppHttpControllersOrderController
+# Orders [/api/orders]
+order related apis
+
+## get list of orders [GET /api/orders]
+
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "code": 0,
+                "msg": "ok",
+                "data": {
+                    "order_no": "order number",
+                    "round_id": 1,
+                    "good_id": 2,
+                    "user_id": 3,
+                    "persons": 100,
+                    "rand_start": 123,
+                    "rand_end": 222
+                }
+            }
+
+## create a new order [POST /api/orders]
+
+
++ Request (application/json)
+    + Body
+
+            {
+                "round_id": 1,
+                "good_id": 2,
+                "persons": 100
+            }
+
+## delete an order [DELETE /api/orders/{id}]
+
+
++ Parameters
+    + id (string, optional) - order id
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "code": 0,
+                "msg": "ok"
+            }
 
 # AppHttpControllersLotteryController
 
