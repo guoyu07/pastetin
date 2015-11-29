@@ -158,7 +158,55 @@ order related apis
                 "msg": "ok"
             }
 
-# AppHttpControllersLotteryController
+# Lotteries [/api/lotteries]
+lottery related apis
+
+## get list of lotteries [GET /api/lotteries]
+
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "code": 0,
+                "msg": "ok",
+                "data": [
+                    {
+                        "id": 1,
+                        "round_id": 2,
+                        "good_id": 3,
+                        "user_id": 4,
+                        "lottery_idx": 400
+                    }
+                ]
+            }
+
+## create a new lottery record [POST /api/lotteries]
+
+
++ Request (application/json)
+    + Body
+
+            {
+                "round_id": 1,
+                "good_id": 2,
+                "user_id": 3,
+                "lottery_idx": 100
+            }
+
+## delete a lottery record [DELETE /api/lotteries/{id}]
+
+
++ Parameters
+    + id (string, optional) - lottery id
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "code": 0,
+                "msg": "ok"
+            }
 
 # Banners [/api/banners]
 Banner相关接口
